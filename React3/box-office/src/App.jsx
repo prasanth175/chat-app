@@ -16,10 +16,8 @@ function App() {
         <Starred />
       </Route>
 
-      <Route>
-        <div>
+      <Route exact path = "/show/:id" >
           <Show />
-        </div>
         </Route>
     </Switch>
   );
