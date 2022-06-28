@@ -19,4 +19,4 @@ function PrivateRoute({ children, ...routeProps }) {
   )
 }
 
-export default PrivateRoute
+export default PrivateRoute;
