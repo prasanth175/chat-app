@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { database } from "../misc/firebase";
 import { transformToArrWithId } from '../misc/helpers';
 
@@ -19,7 +19,7 @@ function RoomsProvider({children}) {
 
         return () => {
             roomListRef.off();
-        }
+        };
     }, []);
 
     return (
@@ -28,4 +28,8 @@ function RoomsProvider({children}) {
 }
 
 export default RoomsProvider;
+
+export const useRooms = () => {
+    return useContext(RoomsContext);
+}
 

@@ -16,4 +16,4 @@ function Home() {
   </RoomsProvider>
 )}
 
-export default Home
+export default Home;
