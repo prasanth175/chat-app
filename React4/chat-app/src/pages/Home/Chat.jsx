@@ -25,7 +25,7 @@ function Chat() {
     }
 
   return (
-    <div>
+    <>
         <div className='chat-top'>
             <ChatTop />
         </div>
@@ -35,7 +35,7 @@ function Chat() {
         <div className='chat-bottom'>
             <ChatBottom />
         </div>
-    </div>
+    </>
   )
 }
 

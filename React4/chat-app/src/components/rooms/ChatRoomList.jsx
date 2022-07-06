@@ -13,7 +13,7 @@ function ChatRoomList({ aboveElementHeight }) {
 
   return (
     <Nav
-       appearance='subtitle'
+       appearance='subtle'
        vertical
        reversed
        className='overflow-y-scroll custom-scroll'
@@ -28,7 +28,7 @@ function ChatRoomList({ aboveElementHeight }) {
         {rooms &&
           rooms.length > 0 &&
           rooms.map((room) => (
-            <Nav.Item
+            <Nav.Item 
             componentClass={Link}
             to={`/chat/${room.id}`}
              key={room.id}
