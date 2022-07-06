@@ -6,4 +6,4 @@ function ProfileAvatar({ name, ...avatarProps }) {
   return <Avatar circle {...avatarProps}>{getNameInitials(name)}</Avatar>
 }
 
-export default ProfileAvatar
+export default ProfileAvatar;
