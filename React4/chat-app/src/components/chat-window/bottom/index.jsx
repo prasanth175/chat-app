@@ -32,7 +32,7 @@ function Bottom() {
 
     const onSendClick = async() => {
         if (input.trim() === '') {
-            return;
+            return
         }
 
         const msgData = assembleMessage(profile, chatId);
@@ -64,7 +64,7 @@ function Bottom() {
     }
 
     const onKeyDown = (ev) => {
-        if(ev.KeyCode === 13) {
+        if(ev.key === 'Enter') {
             ev.preventDefault();
             onSendClick();
         }
