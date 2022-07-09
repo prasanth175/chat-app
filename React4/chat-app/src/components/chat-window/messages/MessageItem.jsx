@@ -12,7 +12,7 @@ import ProfileInfoBtnModal from './ProfileInfoBtnModal';
 
 
 
-function MessageItem({ message, handleAdmin, handleLike }) {
+function MessageItem({ message, handleAdmin, handleLike, handleDelete }) {
 
     const { author, createdAt, text, likes, likeCount } = message;
 
@@ -58,6 +58,15 @@ function MessageItem({ message, handleAdmin, handleLike }) {
                  onClick={() => handleLike(message.id)}
                  badgeContent={likeCount}
                />
+               {
+                isAuthor &&  
+                <IconBtnControl
+                isVisible={canShowIcons}
+                iconName="close"
+                tooltip="Delete this message"
+                onClick={() => handleDelete(message.id)}
+              />
+               }
 
     </div>
 
