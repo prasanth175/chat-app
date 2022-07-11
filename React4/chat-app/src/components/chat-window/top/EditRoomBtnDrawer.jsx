@@ -33,7 +33,7 @@ function EditRoomBtnDrawer() {
     }
 
   return (
-    <div>
+    <>
         <Button className='br-circle' size='sm' color='red' onClick={open}>
             A
         </Button>
@@ -66,7 +66,7 @@ function EditRoomBtnDrawer() {
             </Drawer.Footer>
 
         </Drawer>
-    </div>
+    </>
   )
 }
 
