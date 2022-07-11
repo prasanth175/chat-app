@@ -5,7 +5,7 @@ import TimeAgo from 'timeago-react';
 import { useCurrentRoom } from '../../../context/current-room.context';
 import { useHover, useMediaQuery } from '../../../misc/custom-hooks';
 import { auth } from '../../../misc/firebase';
-import ProfileAvatar from '../../dashboard/ProfileAvatar';
+import ProfileAvatar from '../../ProfileAvatar';
 import PresenceDot from '../../PresenceDot';
 import IconBtnControl from './IconBtnControl';
 import ImgBtnModal from './ImgBtnModal';

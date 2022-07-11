@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 import React, { createContext, useContext, useEffect, useState } from "react";
 import firebase from "firebase/app";
-import { auth, database, messaging } from "../misc/firebase";
+import { auth, database, fcmVapidKey, messaging } from "../misc/firebase";
 
 export const isOfflineForDatabase = {
     state: 'offline',
@@ -59,7 +59,9 @@ function ProfileProvider({ children }) {
                 if(messaging) {
 
                     try {
-                        const currentToken = await messaging.getToken();
+                        const currentToken = await messaging.getToken({
+                            vapidKey: fcmVapidKey,
+                        })
                         if (currentToken) {
                             await database.ref(`/fcm_token/${currentToken}`).set(authObj.uid);
                              } 
@@ -76,7 +78,7 @@ function ProfileProvider({ children }) {
                         } catch (err) {
                             console.log('An error occurred while retrieving token. ', err);
                         }
-                    })
+                    });
                 }
 
             }else {

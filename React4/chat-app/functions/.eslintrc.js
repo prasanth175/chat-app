@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "google",
+    "consistent-return",
   ],
   rules: {
     quotes: ["error", "double"],

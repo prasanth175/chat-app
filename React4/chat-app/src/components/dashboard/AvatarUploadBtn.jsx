@@ -4,7 +4,7 @@ import { Alert, Button, Modal } from 'rsuite';
 import { useProfile } from '../../context/profile.context';
 import { database, storage } from '../../misc/firebase';
 import { useModalState } from '../../misc/custom-hooks';
-import ProfileAvatar from './ProfileAvatar';
+import ProfileAvatar from '../ProfileAvatar';
 import { getUserUpdates } from '../../misc/helpers';
 
 const fileInputTypes = '.png, .jpeg, .jpg';
